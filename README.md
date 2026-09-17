@@ -1,6 +1,6 @@
-# 🛡️ PhishGuardian
+# 🛡️ PhishingGuardian
 
-**PhishGuardian** is an interactive **cybersecurity awareness and phishing education platform** designed to help users understand common cyber threats through **interactive scenarios, games, quizzes, awareness content, and visual learning**.
+**PhishingGuardian** is an interactive **cybersecurity awareness and phishing education platform** designed to help users understand common cyber threats through **interactive scenarios, games, quizzes, awareness content, and visual learning**.
 
 The project focuses on making cybersecurity education more engaging by combining traditional awareness material with game-based learning.
 
@@ -8,7 +8,7 @@ The project focuses on making cybersecurity education more engaging by combining
 
 ## 📌 Project Overview
 
-PhishGuardian is a web-based cybersecurity awareness project that allows users to learn about online threats through an interactive experience.
+PhishingGuardian is a web-based cybersecurity awareness project that allows users to learn about online threats through an interactive experience.
 
 The platform includes multiple learning sections covering topics such as:
 
@@ -28,7 +28,7 @@ The objective is to help users recognize suspicious activities and develop safer
 
 ## 🎯 Objectives
 
-The main objectives of PhishGuardian are:
+The main objectives of PhishingGuardian are:
 
 1. Increase cybersecurity awareness among users.
 2. Teach users how to identify phishing and other suspicious activities.
@@ -524,7 +524,7 @@ Add the appropriate license here if you decide to distribute the project under a
 
 ## ⚠️ Disclaimer
 
-PhishGuardian is an educational cybersecurity awareness project.
+PhishingGuardian is an educational cybersecurity awareness project.
 
 It is designed to demonstrate security concepts and promote safer online behavior. It should not be used for unauthorized access, malicious activity, or testing systems without proper authorization.
 
