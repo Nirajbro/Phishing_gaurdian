@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Identity Theft Awareness Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #222;
+    }
+    p {
+      text-align: center;
+      margin: 10px 0 20px;
+    }
+    video {
+      display: block;
+      margin: 20px auto;
+      width: 100%;
+      max-width: 720px;
+      border-radius: 8px;
+    }
+    .quiz {
+      margin: 20px 0;
+    }
+    .question {
+      background-color: #e9ecef;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .question p {
+      margin: 0 0 10px;
+      font-weight: bold;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+      padding: 5px;
+      transition: background-color 0.3s ease;
+      border-radius: 4px;
+    }
+    .options label:hover {
+      background-color: #dce4ec;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    .submit-button {
+      display: block;
+      margin: 20px auto;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .submit-button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Identity Theft Awareness Quiz</h1>
+    <p>Learn how to protect yourself from identity theft and safeguard your personal information.</p>
+
+    <h2>Watch the Video</h2>
+    <video controls>
+      <source src="videos/identity_theft_video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>Quiz</h2>
+    <form id="quiz-form" class="quiz">
+      <!-- Question 1 -->
+      <div class="question">
+        <p>1. What is identity theft?</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="wrong" /> A form of computer virus</label>
+          <label><input type="radio" name="q1" value="correct" /> Unauthorized use of personal information</label>
+          <label><input type="radio" name="q1" value="wrong" /> A type of phishing attack</label>
+          <label><input type="radio" name="q1" value="wrong" /> Online fraud</label>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p>2. Which method is effective in preventing identity theft?</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="wrong" /> Sharing your passwords with family</label>
+          <label><input type="radio" name="q2" value="correct" /> Using strong, unique passwords and monitoring accounts</label>
+          <label><input type="radio" name="q2" value="wrong" /> Ignoring suspicious emails</label>
+          <label><input type="radio" name="q2" value="wrong" /> Posting your personal info online</label>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p>3. What might be a sign of identity theft?</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="wrong" /> Regular statements from your bank</label>
+          <label><input type="radio" name="q3" value="correct" /> Unexpected charges or unfamiliar transactions</label>
+          <label><input type="radio" name="q3" value="wrong" /> Consistent login activity</label>
+          <label><input type="radio" name="q3" value="wrong" /> Receiving personal emails</label>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <p>4. What should you do if you suspect identity theft?</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="wrong" /> Wait to see if it resolves on its own</label>
+          <label><input type="radio" name="q4" value="wrong" /> Post about it on social media</label>
+          <label><input type="radio" name="q4" value="correct" /> Report to the authorities and monitor your accounts</label>
+          <label><input type="radio" name="q4" value="wrong" /> Change your email address only</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-button">Finish Quiz</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("quiz-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const answers = {
+        q1: 'correct',
+        q2: 'correct',
+        q3: 'correct',
+        q4: 'correct'
+      };
+
+      let score = 0;
+      for (let question in answers) {
+        const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+        if (selectedOption && selectedOption.value === answers[question]) {
+          score++;
+        }
+      }
+
+      alert(`You scored ${score}/4!`);
+
+      // Redirect with quiz result flag
+      window.location.href = "pacman.html?quiz=finished";
+    });
+  </script>
+</body>
+</html>
